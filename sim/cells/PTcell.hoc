@@ -3519,6 +3519,7 @@ proc init_once() {
     insert kap        // K-A current
     insert k_ion
     insert na_ion   
+    insert nap  // added 04-30-2023 donald doherty
   }
   setallprop()
   addapicchan()
@@ -3547,7 +3548,7 @@ proc init_once() {
     // insert cat
     insert can
     insert kBK
-    insert nap	// added 04-28-2023 donald doherty
+    // insert nap	// added 04-28-2023 donald doherty
     insert Nafx // added 04-28-2023 donald doherty
   }
   setsomag() 

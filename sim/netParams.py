@@ -160,9 +160,13 @@ if 'PT5B_full' not in loadCellParams:
             cellRule['secs'][secName]['mechs'][kmech]['gbar'] *= cfg.KgbarFactor 
 
     ##### Adding params to change in batch ###################################
-    cellRule['secs']['soma']['mechs']['nap']['gbar'] = cfg.gbar 	# change gbar in nap channel (soma only)
-    cellRule['secs']['soma']['mechs']['kBK']['gpeak'] = cfg.gpeak 	# change gpeak in kBK channel (soma only)
-    cellRule['secs']['soma']['mechs']['Nafx']['gnafbar'] = cfg.gnafbar	# change gnafbar in NaT channel (soma only)
+#    cellRule['secs']['soma']['mechs']['nap']['gbar'] = cfg.gbar        # change gbar in nap channel (soma only)
+    cellRule['secs']['soma']['mechs']['kBK']['gpeak'] = cfg.gpeak       # change gpeak in kBK channel (soma only)
+#    cellRule['secs']['soma']['mechs']['Nafx']['gnafbar'] = cfg.gnafbar # change gnafbar in NaT channel (soma only)
+    for secName in cellRule['secs']:
+        cellRule['secs'][secName]['mechs']['nap']['gbar'] = cfg.gbar    # change gbar in nap channel (all sections)
+    for secName in cellRule['secs']:
+        cellRule['secs'][secName]['mechs']['Nafx']['gnafbar'] = cfg.gnafbar    # change gnafbar in NaT channel (all sections)
 
 
     # Reduce dend Na to avoid dend spikes (compensate properties by modifying axon params)
