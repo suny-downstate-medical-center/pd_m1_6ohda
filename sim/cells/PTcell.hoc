@@ -3520,6 +3520,7 @@ proc init_once() {
     insert k_ion
     insert na_ion   
     insert nap  // added 04-30-2023 donald doherty
+    insert Nafx // added 04-28-2023 donald doherty
   }
   setallprop()
   addapicchan()
@@ -3549,7 +3550,7 @@ proc init_once() {
     insert can
     insert kBK
     // insert nap	// added 04-28-2023 donald doherty
-    insert Nafx // added 04-28-2023 donald doherty
+    // insert Nafx // added 04-28-2023 donald doherty
   }
   setsomag() 
   forsec "axon" {     // axon has I_KD, and more I_Na, I_KA, I_KDR, and no I_h
