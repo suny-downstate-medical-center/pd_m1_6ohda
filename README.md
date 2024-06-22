@@ -5,4 +5,4 @@ We built this simulation, based on a <a href="https://github.com/suny-downstate-
 <p>Get the preprint <a href="https://www.biorxiv.org/content/10.1101/2024.05.23.595566v1">Donald W. Doherty et al. (2024).</a></p>
 <h2>Acknowlegements</h2>
 <p>This research was funded by Aligning Science Across Parkinson's [ASAP-020572] through the Michael J. Fox Foundation for Parkinson's Research (MJFF).</p>
-<p>Cite the code: [![DOI](https://zenodo.org/badge/818711475.svg)](https://zenodo.org/doi/10.5281/zenodo.12399982)</p>
+<p>Cite the code: <a href="https://zenodo.org/doi/10.5281/zenodo.12399982"><img src="https://zenodo.org/badge/818711475.svg" alt="DOI"></a></p>
