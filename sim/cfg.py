@@ -21,7 +21,7 @@ cfg = specs.SimConfig()
 #------------------------------------------------------------------------------
 # Run parameters
 #------------------------------------------------------------------------------
-cfg.duration = 2.0*1e3 
+cfg.duration = 4.3*1e3 
 cfg.dt = 0.025
 cfg.seeds = {'conn': 4321, 'stim': 1234, 'loc': 4321} 
 cfg.hParams = {'celsius': 34, 'v_init': -80}  
@@ -49,6 +49,13 @@ cfg.checkErrors = False
 #------------------------------------------------------------------------------
 allpops = ['IT2','PV2','SOM2','IT4','IT5A','PV5A','SOM5A','IT5B','PT5B','PV5B','SOM5B','IT6','CT6','PV6','SOM6']
 
+cfg.cellsrec = -1
+if cfg.cellsrec == 0:  cfg.recordCells = ['all'] # record all cells
+elif cfg.cellsrec == 1: cfg.recordCells = [('PT5B',[x]) for x in range(0, 400)] #
+elif cfg.cellsrec == 2: cfg.recordCells = [5130, 5131, 5132, 5133, 5134, 5135, 5136, 5137, 5138, 5139, 5140, 5141, 5142, 5143, 5144, 5145, 5146, 5147, 5148, 5149]
+elif cfg.cellsrec == 3: cfg.recordCells = [(pop,50) for pop in ['IT5A', 'PT5B']]+[('PT5B',x) for x in [393,579,19,104]] #,214,1138,799]] # record selected cells # record selected cells
+elif cfg.cellsrec == 4: cfg.recordCells = [(pop,50) for pop in ['IT2', 'IT4', 'IT5A', 'PT5B']]+[('PT5B',x) for x in [393,447,579,19,104,214,1138,979,799]] # record selected cells
+
 cfg.recordTraces = {'V_soma': {'sec':'soma', 'loc':0.5, 'var':'v'}}#,
 					#'V_soma_ih': {'sec':'soma', 'loc':0.5, 'var':'gbar', 'mech':'hd', 'conds':{'pop': 'PT5B'}}}
 					# 'V_apic_26': {'sec':'apic_26', 'loc':0.5, 'var':'v', 'conds':{'pop': 'PT5B'}},
@@ -70,7 +77,7 @@ cfg.recordStep = 0.025
 # Saving
 #------------------------------------------------------------------------------
 cfg.simLabel = 'sM1_04-28-2023_06'
-cfg.saveFolder = '../data/'
+cfg.saveFolder = 'data/'
 cfg.savePickle = False
 cfg.saveJson = True
 cfg.saveDataInclude = ['simData', 'simConfig', 'netParams', 'net']
