@@ -21,7 +21,7 @@ cfg = specs.SimConfig()
 #------------------------------------------------------------------------------
 # Run parameters
 #------------------------------------------------------------------------------
-cfg.duration = 4.3*1e3 
+cfg.duration = 4
 cfg.dt = 0.025
 cfg.seeds = {'conn': 4321, 'stim': 1234, 'loc': 4321} 
 cfg.hParams = {'celsius': 34, 'v_init': -80}  
@@ -77,14 +77,14 @@ cfg.recordStep = 0.025
 # Saving
 #------------------------------------------------------------------------------
 cfg.simLabel = 'sM1_04-28-2023_06'
-cfg.saveFolder = 'data/'
+cfg.saveFolder = '/data/billl/'
 cfg.savePickle = False
 cfg.saveJson = True
 cfg.saveDataInclude = ['simData', 'simConfig', 'netParams', 'net']
 cfg.backupCfgFile = None #['cfg.py', 'backupcfg/'] 
 cfg.gatherOnlySimData = False
-cfg.saveCellSecs = False
-cfg.saveCellConns = False
+cfg.saveCellSecs = True
+cfg.saveCellConns = True
 cfg.compactConnFormat = 0
 
 #------------------------------------------------------------------------------
