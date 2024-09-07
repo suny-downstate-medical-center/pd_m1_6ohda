@@ -18,4 +18,6 @@ from netpyne import sim
 from cfg import cfg
 from netParams import netParams
 
+sim.pc.timeout(300)
 sim.createSimulateAnalyze(netParams, cfg)
+

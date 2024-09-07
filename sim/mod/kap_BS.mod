@@ -23,7 +23,7 @@ PARAMETER {
     celsius             (degC)
     ek
 
-    sh      = 0
+    sh      = 11			: threshold matches Hong-yuan PT data
     gbar    = 0.008     (mho/cm2)
     vhalfn  = 11        (mV)
     vhalfl  = -56       (mV)

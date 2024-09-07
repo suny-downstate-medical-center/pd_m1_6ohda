@@ -21,7 +21,7 @@ cfg = specs.SimConfig()
 #------------------------------------------------------------------------------
 # Run parameters
 #------------------------------------------------------------------------------
-cfg.duration = 4.3*1e3 
+cfg.duration = 0.1*1e3 
 cfg.dt = 0.025
 cfg.seeds = {'conn': 4321, 'stim': 1234, 'loc': 4321} 
 cfg.hParams = {'celsius': 34, 'v_init': -80}  
@@ -49,7 +49,7 @@ cfg.checkErrors = False
 #------------------------------------------------------------------------------
 allpops = ['IT2','PV2','SOM2','IT4','IT5A','PV5A','SOM5A','IT5B','PT5B','PV5B','SOM5B','IT6','CT6','PV6','SOM6']
 
-cfg.cellsrec = -1
+cfg.cellsrec = 1
 if cfg.cellsrec == 0:  cfg.recordCells = ['all'] # record all cells
 elif cfg.cellsrec == 1: cfg.recordCells = [('PT5B',[x]) for x in range(0, 400)] #
 elif cfg.cellsrec == 2: cfg.recordCells = [5130, 5131, 5132, 5133, 5134, 5135, 5136, 5137, 5138, 5139, 5140, 5141, 5142, 5143, 5144, 5145, 5146, 5147, 5148, 5149]
@@ -76,8 +76,8 @@ cfg.recordStep = 0.025
 #------------------------------------------------------------------------------
 # Saving
 #------------------------------------------------------------------------------
-cfg.simLabel = 'sM1_04-28-2023_06'
-cfg.saveFolder = 'data/'
+cfg.simLabel = 'sM1_09-07-2024_01'
+cfg.saveFolder = '/data/don/'
 cfg.savePickle = False
 cfg.saveJson = True
 cfg.saveDataInclude = ['simData', 'simConfig', 'netParams', 'net']
@@ -163,8 +163,8 @@ cfg.weightNormThreshold = 4.0  # weight normalization factor threshold
 cfg.addConn = 1
 cfg.scale = 1.0
 cfg.sizeY = 1350.0
-cfg.sizeX = 300.0
-cfg.sizeZ = 300.0
+cfg.sizeX = 30.0 # 10% of typical size 300.0
+cfg.sizeZ = 30.0 # 10% of typical size 300.0
 cfg.correctBorderThreshold = 150.0
 
 cfg.L5BrecurrentFactor = 1.0

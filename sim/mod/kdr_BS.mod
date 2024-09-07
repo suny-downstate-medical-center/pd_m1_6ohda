@@ -31,7 +31,7 @@ PARAMETER {
     gmn     = 0.7       (1)
     nmax    = 20        (1)
     q10     = 1
-    sh      = 0
+    sh      = 11		: threshold matches Hong-yuan PT data
 }
 
 NEURON {

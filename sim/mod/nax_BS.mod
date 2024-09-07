@@ -26,7 +26,7 @@ PARAMETER {
     celsius             (degC)
     ena                 (mV)        : must be explicitly def. in hoc
 
-    sh      = 0         (mV)
+    sh      = 11        (mV)	    : threshold matches Hong-yuan PT data
     gbar    = 0.010     (mho/cm2)
 
     tha     = -30       (mV)        : v 1/2 for act
