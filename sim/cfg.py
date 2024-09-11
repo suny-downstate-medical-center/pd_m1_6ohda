@@ -76,7 +76,7 @@ cfg.recordStep = 0.025
 #------------------------------------------------------------------------------
 # Saving
 #------------------------------------------------------------------------------
-cfg.simLabel = 'sM1_09-08-2024_02'
+cfg.simLabel = 'sM1_09-11-2024_04'
 cfg.saveFolder = '/data/don/'
 cfg.savePickle = False
 cfg.saveJson = True
@@ -161,7 +161,7 @@ cfg.weightNorm = 1  # use weight normalization
 cfg.weightNormThreshold = 4.0  # weight normalization factor threshold
 
 cfg.addConn = 1
-cfg.scale = 0.1     # scale 10% - 1.0 == 100%
+cfg.scale = 0.01     # scale 10% - 1.0 == 100%
 cfg.sizeY = 1350.0
 cfg.sizeX = 300.0
 cfg.sizeZ = 300.0
@@ -219,6 +219,7 @@ cfg.weightLong = 0.5  # corresponds to unitary connection somatic EPSP (mV)
 cfg.startLong = 0  # start at 0 ms
 # increaced motor thalamus TPO and TVL to 0-10Hz (from TPO [0, 5] and TVL [0, 2.5])
 cfg.ratesLong = {'TPO': [0, 5], 'TVL': [0, 2.5], 'S1': [0, 5], 'S2': [0, 5], 'cM1': [0, 2.5], 'M2': [0, 2.5], 'OC': [0, 5]}
+cfg.mitoPark = True     # Simulating mitoPark if True; in netParams.py enables setting VL to PT synapse weights
 
 ## input pulses
 cfg.addPulses = 0
