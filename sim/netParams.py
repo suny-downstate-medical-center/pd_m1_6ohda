@@ -557,8 +557,12 @@ if cfg.addLongConn:
     syns = {'exc': ESynMech, 'inh': 'GABAA'}
     synFracs = {'exc': cfg.synWeightFractionEE, 'inh': [1.0]}
 
+    localWeightLong = cfg.weightLong
     for longPop in longPops:
         for ct in cellTypes:
+            if (cfg.mitoPark):
+                if (longPop == 'TVL') & (ct == 'PT'):
+                    localWeightLong = cfg.weightLong * 0.5      # VL synapses on PT neurons have one half (0.5) synaptic weight; for 26-28 week mitoPark
             for EorI in ['exc', 'inh']:
                 for i, (binRange, convergence) in enumerate(zip(binsLong[(longPop, ct)], cmatLong[(longPop, ct, EorI)])):
                     for cellModel in cellModels:
@@ -568,7 +572,7 @@ if cfg.addLongConn:
                             'postConds': {'cellModel': cellModel, 'cellType': ct, 'ynorm': list(binRange)},
                             'synMech': syns[EorI],
                             'convergence': convergence,
-                            'weight': cfg.weightLong / cfg.synsperconn[cellModel], 
+                            'weight': localWeightLong / cfg.synsperconn[cellModel], 
                             'synMechWeightFactor': cfg.synWeightFractionEE,
                             'delay': 'defaultDelay+dist_3D/propVelocity',
                             'synsPerConn': cfg.synsperconn[cellModel],
