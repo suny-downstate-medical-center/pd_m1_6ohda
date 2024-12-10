@@ -6,3 +6,28 @@ We built this simulation, based on a <a href="https://github.com/suny-downstate-
 <p>Cite the code: <a href="https://zenodo.org/doi/10.5281/zenodo.12399982"><img src="https://zenodo.org/badge/818711475.svg" alt="DOI"></a></p>
 <h2>Acknowlegements</h2>
 <p>This research was funded by Aligning Science Across Parkinson's [ASAP-020572] through the Michael J. Fox Foundation for Parkinson's Research (MJFF).</p>
+<h2>Parameter settings</h2>
+<h3>Control rest</h3>
+<p>cfg.ihGbar = 0.75
+<p>gbar = 0.0055					# nap		# all secs</p>
+<p>gpeak = 7.251280172010002e-05	# kBK		# soma only</p>
+<p>cfg.gnafbar = 0.00086 			# NaT		# all secs</p>
+<p>cfg.ratesLong = {'TPO': [0,5], 'TVL': [0,2.5], 'S1': [0,5], 'S2': [0,5], 'cM1': [0,2.5], 'M2': [0,2.5], 'OC': [0,5]}</p>
+<h3>Parkinsonian rest</h3>
+<p>cfg.ihGbar = 0.75
+<p>gbar = 0.0055					# nap		# all secs</p>
+<p>gpeak = 7.251280172010002e-04	# kBK		# soma only</p>
+<p>cfg.gnafbar = 0.0172 			# NaT		# all secs</p>
+<p>cfg.ratesLong = {'TPO': [0,5], 'TVL': [0,2.5], 'S1': [0,5], 'S2': [0,5], 'cM1': [0,2.5], 'M2': [0,2.5], 'OC': [0,5]}</p>
+<h3>Control activated (movement)</h3>
+<p>cfg.ihGbar = 0.25
+<p>gbar = 0.0055					# nap		# all secs</p>
+<p>gpeak = 7.251280172010002e-05	# kBK		# soma only</p>
+<p>cfg.gnafbar = 0.00086 			# NaT		# all secs</p>
+<p>cfg.ratesLong = {'TPO': [0,10], 'TVL': [0,10], 'S1': [0,5], 'S2': [0,5], 'cM1': [0,2.5], 'M2': [0,2.5], 'OC': [0,5]}</p>
+<h3>Parkinsonian activated (movement)</h3>
+<p>cfg.ihGbar = 0.25
+<p>gbar = 0.0055					# nap		# all secs</p>
+<p>gpeak = 7.251280172010002e-04	# kBK		# soma only</p>
+<p>cfg.gnafbar = 0.0172 			# NaT		# all secs</p>
+<p>cfg.ratesLong = {'TPO': [0,10], 'TVL': [0,10], 'S1': [0,5], 'S2': [0,5], 'cM1': [0,2.5], 'M2': [0,2.5], 'OC': [0,5]}</p>
