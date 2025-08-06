@@ -4,7 +4,7 @@ We built this simulation, based on a <a href="https://github.com/suny-downstate-
 <p><a href="http://doc.netpyne.org/">NetPyNE</a> is a Python package for creating biological neural networks using the <a href="https://nrn.readthedocs.io">NEURON</a> simulator.</p>
 <p>The data that support the findings of this study are openly available on the DANDI Archive (RRID:SCR_017571) at https://doi.org/10.48324/dandi.001444/0.250805.2002</p>
 <p>View and analyze our data in DANDI Archive through remote streaming, as demonstrated in the Jupyter notebooks Control_Quiet_Wakefulness.ipynb, Parkinsonian_Quiet_Wakefulness.ipynb, Control_Movement.ipynb, Parkinsonian_Movement.ipynb.</p>
-<p>Get the preprint <a href="https://www.biorxiv.org/content/10.1101/2024.05.23.595566v1">Donald W. Doherty et al. (2024).</a></p>
+<p>Read the paper <a href="https://doi.org/10.1038/s41531-025-01070-4">Donald W. Doherty et al. (2025).</a></p>
 <p>Cite the code: <a href="https://zenodo.org/doi/10.5281/zenodo.12399982"><img src="https://zenodo.org/badge/818711475.svg" alt="DOI"></a></p>
 <h2>Acknowlegements</h2>
 <p>This research was funded by Aligning Science Across Parkinson's [ASAP-020572] through the Michael J. Fox Foundation for Parkinson's Research (MJFF).</p>
